@@ -12,7 +12,10 @@ import javax.swing.WindowConstants;
  */
 public class Main {
 
-    /*
+
+
+    public static void main(String[] args) {
+
     SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -20,20 +23,12 @@ public class Main {
                 server.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 server.setSize(1000,700);
                 server.setVisible(true);
-                server.setPreferredSize(new Dimension(1000,700));
+                server.setPreferredSize(new Dimension(500,300));
                 server.pack();
             }
         });
 
-     */
 
-    public static void main(String[] args) {
-        Server server = new Server();
-        server.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        server.setSize(1000,700);
-        server.setVisible(true);
-        server.setPreferredSize(new Dimension(1000,700));
-        server.pack();
     }
 
 }

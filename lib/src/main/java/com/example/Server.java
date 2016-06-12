@@ -1,5 +1,6 @@
 package com.example;
 
+import java.awt.Dimension;
 import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -12,17 +13,14 @@ import javax.swing.JPanel;
 public class Server extends JFrame implements Runnable{
     private Thread thread;
     private ServerSocket servSock;
-    //private JPanel panel;
     private JLabel label;
 
     public Server(){
 
         this.setSize(100,100);
-        JPanel panel = new JPanel();
-        label = new JLabel();
+        label = new JLabel("waiting for answers...");
 
-        panel.add(label);
-        this.add(panel);
+        this.add(label);
 
         try {
             // Detect server ip
@@ -62,6 +60,7 @@ public class Server extends JFrame implements Runnable{
                 String s = new String(b);
                 System.out.println("[Server Said]" + s);
                 label.setText(s);
+                repaint();
             }
             catch(Exception e){
                 //System.out.println("Error: "+e.getMessage());

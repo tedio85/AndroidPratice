@@ -191,6 +191,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 System.arraycopy(strToSend.getBytes(), 0, sendStrByte, 0, strToSend.length());
                 out.write(sendStrByte);
 
+
             }catch (Exception e){
                 System.out.println("Error" + e.getMessage());
             }
